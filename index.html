@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="css/bootstrap.css" rel ="stylesheet" type="text/css" media="all">
+    <link href="css/styles.css" rel="stylesheet" type="text/css" media="all">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script type="text/javascript" src="js/scripts.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>What's Your Destination?</title>
+    <body>
+
+    <marquee behavior="scroll" direction="left" scrollamount="5"
+    onmousedown="this.setAttribute('scrollamount', 2, 0);"
+    onmouseup="this.setAttribute('scrollamount', 6, 0);">
+    <br><br>
+    <h2>Life is short, <span class="and"> and </span>the world is wide...<span class="bold"></span>.</h2></marquee>
+  <div class="jumbotron">
+    <div class="container" >
+      <h1 style="font-size: 800%;">Vacation Destination</h1>
+    </div>
+  </div>
+    <blockquote class="blockquote-reverse">
+      "Where are <strong>YOU</strong> meant to travel next?"
+        <footer>A simple questionnaire that will offer some direction</footer>
+      </blockquote>
+    <div class="travelPhotos" style="max-width:1000px">
+      <img class="mySlides" src="img/nature.jpg" style="width:130%">
+      <img class="mySlides" src="img/japan.jpg" style="width:150%">
+      <img class="mySlides" src="img/thailand.jpg" style="width:140%">
+      <img class="mySlides" src="img/camping.jpg" style="width:100%">
+      <img class="mySlides" src="img/newyork.jpg" style="width:125%">
+      <img class="mySlides" src="img/greenlandwhale.jpg" style="width:120%">
+      <img class="mySlides" src="img/paris.jpg" style="width:130%">
+    </div>
+  <script>
+    var myIndex = 0;
+      carousel();
+        function carousel() {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+        }
+    myIndex++;
+      if (myIndex > x.length) {myIndex = 1}
+      x[myIndex-1].style.display = "block";
+      setTimeout(carousel, 3000); // Change image every 3 seconds
+        }
+  </script>
+  <div class="container">
+    <h2>Where Should Your Next Vacation Be?</h2>
+      <br><br>
+        <form id="quest">
+          <label for="weather">What's your preference in weather?</label>
+            <select id="weather">
+              <option value="t">Hot and sunny</option>
+              <option value="g">Inclimate and unpredictable</option>
+            </select>
+          <br>
+          <label for="tourism">Are you more of a tourist or an explorer?</label>
+            <select id="tourism">
+              <option value="j">Tourist</option>
+              <option value="g">Explorer</option>
+            </select>
+            <br>
+          <label for="culture">Are you looking for a cultural experience?</label>
+        <select id="culture">
+            <option value="j">Yes</option>
+            <option value="t">Not particularly</option>
+        </select>
+            <br>
+          <label for="eating">Does adventurous eating appeal to you?</label>
+            <select id="eating">
+              <option value="j">I'll try anything once</option>
+              <option value="g">I like to stick to what I know</option>
+            </select>
+            <br>
+          <label for="exercise">Do you push beyond or limits or prefer idle relaxation?</label>
+          <select id="exercise">
+            <option value="g">Push beyond my limits</option>
+            <option value="t">Relaxation to the max</option>
+          </select>
+            <br>
+            <button type="submit" class="btn btn-large">My travels will take me...</button>
+        </form>
+          <div class="choices" class="japan">
+            <h3>City, night lights and shopping; robots and gadgets and all things tech, Japan is the place for you! Beautiful ancient Buddhist temples and Shinto shrines are reason enough to visit aside from the fabulous Japanese cuisine! Hōmon suru jikan!</h3></div>
+          <div class="choices" class="thailand">
+            <h3>Foreign, exotic and affordable, there is no greater place than Thailand for you! If the pristine white beaches and the relaxing atmosphere don't win you over the food and people certainly will. Have a cold Cha Yen when you get arrive!</h3></div>
+          <div class="choices" class="greenland">
+            <h3>With remarkable landscapes, exceptional widlife, iceberg-choked fjords and colorful tundra make Greenland your next destination spot! Go kayaking, whalewatching, explore the must-see historical sites and even see the Northern Lights in Kangerlussuaq!</h3></div>
+          </div>
+        </body>
+      </html>
