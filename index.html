@@ -25,14 +25,13 @@
       "Where are <strong>YOU</strong> meant to travel next?"
         <footer>A simple questionnaire that will offer some direction</footer>
       </blockquote>
-    <div class="travelPhotos" style="max-width:1000px">
-      <img class="mySlides" src="img/nature.jpg" style="width:130%">
-      <img class="mySlides" src="img/japan.jpg" style="width:150%">
-      <img class="mySlides" src="img/thailand.jpg" style="width:140%">
-      <img class="mySlides" src="img/camping.jpg" style="width:100%">
-      <img class="mySlides" src="img/newyork.jpg" style="width:125%">
-      <img class="mySlides" src="img/greenlandwhale.jpg" style="width:120%">
-      <img class="mySlides" src="img/paris.jpg" style="width:130%">
+    <div class="travelPhotos" style="max-width:1000px; height:600px; margin:0 auto;">
+      <img class="mySlides" src="img/nature.jpg" style="width:100%">
+      <img class="mySlides" src="img/japan.jpg" style="width:100%">
+      <img class="mySlides" src="img/thailand.jpg" style="width:100%">
+      <img class="mySlides" src="img/newyork.jpg" style="width:100%">
+      <img class="mySlides" src="img/greenlandwhale.jpg" style="width:100%">
+      <img class="mySlides" src="img/paris.jpg" style="width:100%">
     </div>
   <script>
     var myIndex = 0;
@@ -55,41 +54,46 @@
         <form id="quest">
           <label for="weather">What's your preference in weather?</label>
             <select id="weather">
+              <option selected="true" disabled="disabled">Select</option>
               <option value="t">Hot and sunny</option>
               <option value="g">Inclimate and unpredictable</option>
             </select>
           <br>
           <label for="tourism">Are you more of a tourist or an explorer?</label>
             <select id="tourism">
+              <option selected="true" disabled="disabled">Select</option>
               <option value="j">Tourist</option>
               <option value="g">Explorer</option>
             </select>
             <br>
           <label for="culture">Are you looking for a cultural experience?</label>
         <select id="culture">
+            <option selected="true" disabled="disabled">Select</option>
             <option value="j">Yes</option>
             <option value="t">Not particularly</option>
         </select>
             <br>
           <label for="eating">Does adventurous eating appeal to you?</label>
             <select id="eating">
+              <option selected="true" disabled="disabled">Select</option>
               <option value="j">I'll try anything once</option>
               <option value="g">I like to stick to what I know</option>
             </select>
             <br>
           <label for="exercise">Do you push beyond or limits or prefer idle relaxation?</label>
           <select id="exercise">
+            <option selected="true" disabled="disabled">Select</option>
             <option value="g">Push beyond my limits</option>
             <option value="t">Relaxation to the max</option>
           </select>
             <br>
             <button type="submit" class="btn btn-large">My travels will take me...</button>
         </form>
-          <div class="choices" class="japan">
+          <div class="choices japan">
             <h3>City, night lights and shopping; robots and gadgets and all things tech, Japan is the place for you! Beautiful ancient Buddhist temples and Shinto shrines are reason enough to visit aside from the fabulous Japanese cuisine! Hōmon suru jikan!</h3></div>
-          <div class="choices" class="thailand">
+          <div class="choices thailand">
             <h3>Foreign, exotic and affordable, there is no greater place than Thailand for you! If the pristine white beaches and the relaxing atmosphere don't win you over the food and people certainly will. Have a cold Cha Yen when you get arrive!</h3></div>
-          <div class="choices" class="greenland">
+          <div class="choices greenland">
             <h3>With remarkable landscapes, exceptional widlife, iceberg-choked fjords and colorful tundra make Greenland your next destination spot! Go kayaking, whalewatching, explore the must-see historical sites and even see the Northern Lights in Kangerlussuaq!</h3></div>
           </div>
         </body>
