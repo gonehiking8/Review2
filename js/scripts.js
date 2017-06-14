@@ -2,9 +2,10 @@ $(document).ready(function() {
   $("form#quest").submit(function(event) {
     event.preventDefault();
 
-    var tally = {
-      "t":0, "j":0, "g":0
-    };
+    var japantotal = 0;
+    var thailandtotal = 0;
+    var greenlandtotal = 0;
+
 
     var answers = [
       $("#weather").find(":selected").val(),
@@ -16,24 +17,31 @@ $(document).ready(function() {
 
     for (i in answers) {
       var currentAnswer = answers[i];
-      tally[currentAnswer]++;
+      if (currentAnswer == 'j') {
+        japantotal++;
+      } else if (currentAnswer == 't') {
+        thailandtotal++;
+      } else if (currentAnswer == 'g') {
+        greenlandtotal++;
+      }
     }
 
-    if (tally["t"] > tally["j"] && tally["t"] > tally["g"]) {
+
+    if (thailandtotal > japantotal && thailandtotal > greenlandtotal) {
     $(".thailand").show();
     $(".japan").hide();
     $(".greenland").hide();
     window.scrollTo(0,document.body.scrollHeight);
 
 
-    } else if (tally["j"] > tally["g"] && tally["j"] > tally["t"]) {
+    } else if (japantotal > greenlandtotal && japantotal > thailandtotal) {
     $(".japan").show();
     $(".thailand").hide();
     $(".greenland").hide();
     window.scrollTo(0,document.body.scrollHeight);
 
 
-    } else if (tally["g"] > tally["t"] && tally["g"] > tally["t"]) {
+  } else if (greenlandtotal > thailandtotal && greenlandtotal > thailandtotal) {
     $(".greenland").show();
     $(".japan").hide();
     $(".thailand").hide();
